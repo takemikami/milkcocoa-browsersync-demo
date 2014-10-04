@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Meet With Cats -問い合わせ</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../js/heightLine.js"></script>
+<!-- topに戻るjquery-->
+<script type="text/javascript">
+$(function() {
+    var topBtn = $('.backtotop');    
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+<!-- 隠しボタンのjquery -->
+	<script type="text/javascript">
+$(function() {
+	var slide = $('#catComment');
+	var contents = $('#slide-contents');
+	//開くボタン
+	var openBtn = $('#open-btn img');
+	var btnOpenFlug = false;
+	var openFlug = false;
+	var panelSwitch = function() {
+		//閉じる
+		if (openFlug == true ) {
+			slide.stop().animate({
+				'width' : '104px',
+				'height' : '85px',
+				'bottom' : '0',
+				'opacity' : '0'
+			}, 800); 
+			openBtn.show();		//開くボタンにする
+		}
+		//開く
+		else if (openFlug == false) {
+			slide.stop().animate({
+				'width' : '104px',
+				'height' : '85px',
+				'bottom' : '40px',
+				'opacity' : '1.0'
+			}, 800); 
+			openBtn.hide();		//閉じるボタンにする
+		}
+	};
+	//開くボタンクリックしたら
+	$('#open-btn').click(function(){
+		panelSwitch();
+		openFlug = !openFlug;
+		btnOpenFlug = true;
+	});
+	//画面下位置を取得
+	var bottomPos = $(document).height() - $(window).height() - 100;
+	$(window).scroll(function () {
+		if (!btnOpenFlug) {
+			if ($(this).scrollTop() >= bottomPos) {
+				if (openFlug == false) {
+					panelSwitch();
+					openFlug = true;
+				}
+			} else {
+				if (openFlug) {
+					panelSwitch();
+					openFlug = false;
+				}
+			}
+		}
+	});
+});
+</script>
+<!-- 隠しボタンここまで -->
+<!-- topに戻るjquery-->
+<script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
+</head>
+
+<body>
+<div id="header">
+	<div id="header_inner">
+		<h1><a href="../index.html"><img src="../img/titleRogo.png" width="246" height="34"  alt="Meet With Cats"/></a></h1>
+		<div id="headersuv"> <a href="https://twitter.com/"><img src="../img/twitterIco.png" width="50" height="50"  alt="twitterアイコン"/></a> <a href="https://ja-jp.facebook.com/"><img src="../img/facebook.png" width="50" height="50"  alt="facebookアイコン"/></a> </div>
+		<div id="globalnav">
+			<ul>
+				<li><a href="../index.html"><img src="../img/Home.png" width="79" height="20"  alt="ホーム"/></a></li>
+				<li><a href="../introduce/index.html"><img src="../img/About.png" width="79" height="20"  alt="猫紹介"/></a></li>
+				<li><a href="../flow/index.html"><img src="../img/Flow.png" width="143" height="19"  alt="引き渡しの流れ"/></a></li>
+				<li><a href="../aboutShop/index.html"><img src="../img/Shop.png" width="95" height="20"  alt="店舗情報"/></a></li>
+				<li><a href="index.html"><img src="../img/inquiry.png" width="127" height="19"  alt="お問合わせ"/></a></li>
+			</ul>
+		</div>
+		<!--  globalnav--> 
+	</div>
+	<!-- haeder_inner --> 
+</div>
+<!-- header-->
+<div id="header_space"></div>
+<div id="contents">
+	<div id="contents_innner" class="InquiryContentsInner">
+		<h2 class="subTitle"><img src="../img/inquiry/inquiry.png" width="200" height="50"  alt="問い合わせ"/></h2>
+		<div id="InquiryContent">
+			<p>御用の際は、下記のお問い合わせフォームに記入をお願いいたします。</p>
+			<form method="post" action="mail.php">
+				<table cellpadding="5">
+					<tr>
+						<td class="l_Cel">■ご用件</td>
+						<td><select name="ご用件">
+								<option value="">選択してください</option>
+								<option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+								<option value="予約申し込み">予約申し込み</option>
+								<option value="リンクについて">リンクについて</option>
+							</select></td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■お名前</td>
+						<td><input size="20" type="text" name="お名前" />
+							※必須</td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■ふりがな</td>
+						<td><input size="20" type="text" name="ふりがな" /></td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■郵便番号(半角)</td>
+						<td><input type="text" name="郵便番号" id="zip" size="8" onKeyUp="AjaxZip3.zip2addr(this,'','都道府県','住所');"/></td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■住所</td>
+						<td><select name="都道府県">
+							<option selected="selected">選択してください</option>
+							<option value="北海道">北海道</option>
+							<option value="青森県">青森県</option>
+							<option value="岩手県">岩手県</option>
+							<option value="宮城県">宮城県</option>
+							<option value="秋田県">秋田県</option>
+							<option value="山形県">山形県</option>
+							<option value="福島県">福島県</option>
+							<option value="茨城県">茨城県</option>
+							<option value="栃木県">栃木県</option>
+							<option value="群馬県">群馬県</option>
+							<option value="埼玉県">埼玉県</option>
+							<option value="千葉県">千葉県</option>
+							<option value="東京都">東京都</option>
+							<option value="神奈川県">神奈川県</option>
+							<option value="新潟県">新潟県</option>
+							<option value="富山県">富山県</option>
+							<option value="石川県">石川県</option>
+							<option value="福井県">福井県</option>
+							<option value="山梨県">山梨県</option>
+							<option value="長野県">長野県</option>
+							<option value="岐阜県">岐阜県</option>
+							<option value="静岡県">静岡県</option>
+							<option value="愛知県">愛知県</option>
+							<option value="三重県">三重県</option>
+							<option value="滋賀県">滋賀県</option>
+							<option value="京都府">京都府</option>
+							<option value="大阪府">大阪府</option>
+							<option value="兵庫県">兵庫県</option>
+							<option value="奈良県">奈良県</option>
+							<option value="和歌山県">和歌山県</option>
+							<option value="鳥取県">鳥取県</option>
+							<option value="島根県">島根県</option>
+							<option value="岡山県">岡山県</option>
+							<option value="広島県">広島県</option>
+							<option value="山口県">山口県</option>
+							<option value="徳島県">徳島県</option>
+							<option value="香川県">香川県</option>
+							<option value="愛媛県">愛媛県</option>
+							<option value="高知県">高知県</option>
+							<option value="福岡県">福岡県</option>
+							<option value="佐賀県">佐賀県</option>
+							<option value="長崎県">長崎県</option>
+							<option value="熊本県">熊本県</option>
+							<option value="大分県">大分県</option>
+							<option value="宮崎県">宮崎県</option>
+							<option value="鹿児島県">鹿児島県</option>
+							<option value="沖縄県">沖縄県</option>
+						</select>
+						<br>
+						<input type="text" name="住所" id="address" size="50" /></td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■電話番号（半角）</td>
+						<td><input size="30" type="text" name="電話番号" /></td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■Mail（半角）</td>
+						<td><input size="30" type="text" name="Email" />
+							※必須</td>
+					</tr>
+					<tr>
+						<td class="l_Cel">■サイトを知ったきっかけ</td>
+						<td><input name="サイトを知ったきっかけ" type="checkbox" value="友人・知人" />
+							友人・知人
+							<input name="サイトを知ったきっかけ" type="checkbox" value="検索エンジン" />
+							検索エンジン</td>
+					</tr>
+					<tr>
+						<td class="l_Cel2" colspan="2" >■お問い合わせ内容<br />
+							<textarea name="お問い合わせ内容" cols="80" rows="8"></textarea></td>
+					</tr>
+				</table>
+				<p>
+					<input type="submit" value="　確認　" />
+					<input type="reset" value="リセット" />
+				</p>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div id="catblank">
+		<div class="backtotop"> <a href=#header_space><img src="../img/footercat.png" width="72" height="106"  alt="猫シルエット"/></a> </div>
+		<!-- 隠しボタン -->
+		<div id="catComment" class="backtotop">
+			<a href=#header_space><div id="catCommentBlank"></div></a>
+		</div>
+		<!-- 隠しボタンここまで -->
+	</div>
+
+	<p class="copyright">Copyright &copy; Kazuma Yoshii All right reserved.</p>
+</div>
+</body>
+</html>

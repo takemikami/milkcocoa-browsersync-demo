@@ -1,0 +1,30 @@
+
+/* -- JQUERY NEWS TICKER -- */
+.jq-news-ticker {
+	width: 550px;
+	height: 1em;
+	overflow: hidden;
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-left: 44px;
+}
+    .jq-news-ticker .jq-news-ticker-items {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+        .jq-news-ticker .jq-news-ticker-item {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 0;
+            left: 0;
+            position: absolute;
+            white-space: nowrap;
+            line-height: 1em;
+        }
+        .jq-news-ticker .jq-news-ticker-item-focus {}
+

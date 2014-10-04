@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Meet With Cats -ヨーロピアンショートヘアー</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../js/heightLine.js"></script>
+<!-- 隠しボタンのjquery -->
+	<script type="text/javascript">
+$(function() {
+	var slide = $('#catComment');
+	var contents = $('#slide-contents');
+	//開くボタン
+	var openBtn = $('#open-btn img');
+	var btnOpenFlug = false;
+	var openFlug = false;
+	var panelSwitch = function() {
+		//閉じる
+		if (openFlug == true ) {
+			slide.stop().animate({
+				'width' : '104px',
+				'height' : '85px',
+				'bottom' : '0',
+				'opacity' : '0'
+			}, 800); 
+			openBtn.show();		//開くボタンにする
+		}
+		//開く
+		else if (openFlug == false) {
+			slide.stop().animate({
+				'width' : '104px',
+				'height' : '85px',
+				'bottom' : '40px',
+				'opacity' : '1.0'
+			}, 800); 
+			openBtn.hide();		//閉じるボタンにする
+		}
+	};
+	//開くボタンクリックしたら
+	$('#open-btn').click(function(){
+		panelSwitch();
+		openFlug = !openFlug;
+		btnOpenFlug = true;
+	});
+	//画面下位置を取得
+	var bottomPos = $(document).height() - $(window).height() - 100;
+	$(window).scroll(function () {
+		if (!btnOpenFlug) {
+			if ($(this).scrollTop() >= bottomPos) {
+				if (openFlug == false) {
+					panelSwitch();
+					openFlug = true;
+				}
+			} else {
+				if (openFlug) {
+					panelSwitch();
+					openFlug = false;
+				}
+			}
+		}
+	});
+});
+</script>
+<!-- 隠しボタンここまで -->
+<!-- topに戻るjquery-->
+<script type="text/javascript">
+$(function() {
+    var topBtn = $('.backtotop');    
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+<!-- topに戻るjquery-->
+</head>
+
+<body>
+<div id="header">
+	<div id="header_inner">
+		<h1><a href="../index.html"><img src="../img/titleRogo.png" width="246" height="34"  alt="Meet With Cats"/></a></h1>
+		<div id="headersuv"> <a href="https://twitter.com/"><img src="../img/twitterIco.png" width="50" height="50"  alt="twitterアイコン"/></a> <a href="https://ja-jp.facebook.com/"><img src="../img/facebook.png" width="50" height="50"  alt="facebookアイコン"/></a> </div>
+		<div id="globalnav">
+			<ul>
+        <li><a href="../index.html"><img src="../img/Home.png" width="79" height="20"  alt="ホーム"/></a></li>
+        <li><a href="index.html"><img src="../img/About.png" width="79" height="20"  alt="猫紹介"/></a></li>
+        <li><a href="../flow/index.html"><img src="../img/Flow.png" width="143" height="19"  alt="引き渡しの流れ"/></a></li>
+        <li><a href="../aboutShop/index.html"><img src="../img/Shop.png" width="95" height="20"  alt="店舗情報"/></a></li>
+        <li><a href="../inquiry/index.html"><img src="../img/inquiry.png" width="127" height="19"  alt="お問合わせ"/></a></li>
+      </ul>
+		</div>
+		<!--  globalnav--> 
+	</div>
+	<!-- haeder_inner --> 
+</div>
+<!-- header-->
+<div id="header_space"></div>
+<div id="contents">
+	<div id="contents_innner" class="catsContentsInner">
+		<h2><img src="../img/introduce/introduce.png" width="200" height="50"  alt="猫紹介"/></h2>
+		<div id="IntroCats">
+			<div id="backToIntro"><a href="index.html"><img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/>
+				<h3>←猫紹介に戻る</h3>
+				</a> </div>
+			<!-- backToIntro-->
+			<div id="aboutCat"> <img src="../img/introduce/bigEuropianShortHair.jpg" width="400" height="500"  alt=""/> </div>
+			<dl>
+			<dt>品種：</dt><dd>マヌルネコ</dd>
+			<dt>価格：</dt><dd>¥ 398’000 (税込)</dd>
+			<dt>性別：</dt><dd>２歳</dd>
+			<dt>体重：</dt><dd>1.20kg</dd>
+			<dt>ワクチン：</dt><dd>接種済み</dd>
+			<dt>コメント：</dt><dd>珍しいマヌルネコちゃんです！<br>はるばるシベリアから来てくれました！<br>是非お店に会いに来てください！</dd>
+			</dl>
+			
+			
+		</div>
+		<!-- IntroCats--> 
+		<div id="otherCats">
+			<h4>他の猫ちゃんはこちら！</h4>
+			<ul>
+				<a href="aboutSiamese.html"><li class="heightLine-group1"><img src="../img/introduce/smallSiamese.jpg" width="120" height="100"  alt=""/><img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/>
+				<p>シャム</p></li></a>
+				<a href="aboutBritishShortHeir.html" ><li class="heightLine-group1"><img src="../img/introduce/smallBritishShortHeir.jpg" width="120" height="100"  alt=""/>
+				<img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/><p>ブリティッシュショートヘアー</p></li></a>
+				<a href="aboutPersian.html"><li class="heightLine-group1"><img src="../img/introduce/smallPersian.jpg" width="120" height="100"  alt=""/><img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/><p>ペルシャ</p></li></a>
+				<a href="aboutRagdoll.html"><li class="heightLine-group1"><img src="../img/introduce/smallRagdoll.jpg" width="120" height="100"  alt=""/><img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/>
+				<p>ラグドール</p></li></a>
+				<a href="aboutEuropianShortHair.html"><li class="heightLine-group1"><img src="../img/introduce/smallEuropianShortHair.jpg" width="120" height="100"  alt=""/><img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/><p>ヨーロピアンショートヘアー</p></li></a>
+				<a href="aboutManul.html"><li class="listend heightLine-group1"><img src="../img/introduce/smallManul.jpg" width="120" height="100"  alt=""/><img src="../img/catFot.png" width="22" height="18"  alt="猫の足アイコン" class="IntroduceIcon"/><p>マヌルネコ</p> </li></a>
+			</ul>
+		</div>
+	</div>
+	<!-- contentsInner--> 
+</div>
+<!-- contents-->
+<div id="footer">
+	<div id="catblank">
+		<div class="backtotop"> <a href=#header_space><img src="../img/footercat.png" width="72" height="106"  alt="猫シルエット"/></a> </div>
+		<!-- 隠しボタン -->
+		<div id="catComment" class="backtotop">
+			<a href=#header_space><div id="catCommentBlank"></div></a>
+		</div>
+		<!-- 隠しボタンここまで -->
+	</div>
+	<p class="copyright">Copyright &copy; Kazuma Yoshii All right reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Meet With Cats -店舗情報</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../js/heightLine.js"></script>
+
+<!-- 隠しボタンのjquery -->
+	<script type="text/javascript">
+$(function() {
+	var slide = $('#catComment');
+	var contents = $('#slide-contents');
+	//開くボタン
+	var openBtn = $('#open-btn img');
+	var btnOpenFlug = false;
+	var openFlug = false;
+	var panelSwitch = function() {
+		//閉じる
+		if (openFlug == true ) {
+			slide.stop().animate({
+				'width' : '104px',
+				'height' : '85px',
+				'bottom' : '0',
+				'opacity' : '0'
+			}, 800); 
+			openBtn.show();		//開くボタンにする
+		}
+		//開く
+		else if (openFlug == false) {
+			slide.stop().animate({
+				'width' : '104px',
+				'height' : '85px',
+				'bottom' : '40px',
+				'opacity' : '1.0'
+			}, 800); 
+			openBtn.hide();		//閉じるボタンにする
+		}
+	};
+	//開くボタンクリックしたら
+	$('#open-btn').click(function(){
+		panelSwitch();
+		openFlug = !openFlug;
+		btnOpenFlug = true;
+	});
+	//画面下位置を取得
+	var bottomPos = $(document).height() - $(window).height() - 100;
+	$(window).scroll(function () {
+		if (!btnOpenFlug) {
+			if ($(this).scrollTop() >= bottomPos) {
+				if (openFlug == false) {
+					panelSwitch();
+					openFlug = true;
+				}
+			} else {
+				if (openFlug) {
+					panelSwitch();
+					openFlug = false;
+				}
+			}
+		}
+	});
+});
+</script>
+<!-- 隠しボタンここまで -->
+
+<!-- topに戻るjquery-->
+<script type="text/javascript">
+$(function() {
+    var topBtn = $('.backtotop');    
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+<!-- topに戻るjquery-->
+</head>
+
+<body>
+<div id="header">
+  <div id="header_inner">
+    <h1><a href="../index.html"><img src="../img/titleRogo.png" width="246" height="34"  alt="Meet With Cats"/></a></h1>
+    <div id="headersuv"> <a href="https://twitter.com/"><img src="../img/twitterIco.png" width="50" height="50"  alt="twitterアイコン"/></a> <a href="https://ja-jp.facebook.com/"><img src="../img/facebook.png" width="50" height="50"  alt="facebookアイコン"/></a> </div>
+    <div id="globalnav">
+      <ul>
+        <li><a href="../index.html"><img src="../img/Home.png" width="79" height="20"  alt="ホーム"/></a></li>
+        <li><a href="../introduce/index.html"><img src="../img/About.png" width="79" height="20"  alt="猫紹介"/></a></li>
+        <li><a href="../flow/index.html"><img src="../img/Flow.png" width="143" height="19"  alt="引き渡しの流れ"/></a></li>
+        <li><a href="index.html"><img src="../img/Shop.png" width="95" height="20"  alt="店舗情報"/></a></li>
+        <li><a href="../inquiry/index.html"><img src="../img/inquiry.png" width="127" height="19"  alt="お問合わせ"/></a></li>
+      </ul>
+    </div>
+    <!--  globalnav--> 
+  </div>
+  <!-- haeder_inner --> 
+</div>
+<!-- header-->
+<div id="header_space"></div>
+<div id="contents">
+  <div id="contents_innner" class="aboutShopContentsInner">
+  <h2 class="subTitle"><img src="../img/aboutShop/aboutShop.png" width="200" height="50"  alt="店舗情報"/></h2>
+  <div id="aboutShopcontent">
+  <div id="googleMap">
+  	<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?f=q&amp;source=s_q&amp;hl=ja&amp;geocode=&amp;q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%82%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%97+%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E7%A0%94%E7%A9%B6%E6%89%80&amp;aq=2&amp;oq=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3&amp;sll=35.641673,139.963074&amp;sspn=0.683016,0.906372&amp;brcurrent=3,0x60188ca9c5cc0c8f:0x3e2db10f18ec14a5,0&amp;ie=UTF8&amp;hq=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E7%A0%94%E7%A9%B6%E6%89%80&amp;hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%82%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%97&amp;t=m&amp;ll=35.658151,139.69717&amp;spn=0.008369,0.013733&amp;z=16&amp;iwloc=A&amp;output=embed&iwloc=B"></iframe><br />
+	</div>
+	<table>
+	<tr>
+		<th>住所</th>
+		<td>
+		〒150-0043<br />
+		東京都渋谷区道玄坂２丁目１０−７<br />
+		<a href="https://maps.google.co.jp/maps?f=q&amp;source=embed&amp;hl=ja&amp;geocode=&amp;q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%82%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%97+%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E7%A0%94%E7%A9%B6%E6%89%80&amp;aq=2&amp;oq=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3&amp;sll=35.641673,139.963074&amp;sspn=0.683016,0.906372&amp;brcurrent=3,0x60188ca9c5cc0c8f:0x3e2db10f18ec14a5,0&amp;ie=UTF8&amp;hq=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%E7%A0%94%E7%A9%B6%E6%89%80&amp;hnear=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%82%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%97&amp;t=m&amp;ll=35.658151,139.69717&amp;spn=0.008369,0.013733&amp;z=16&amp;iwloc=A">googleMapで表示</a>
+		</td>
+	</tr>
+	<tr>
+		<th>電話番号</th>
+		<td>00-0000-0000</td>
+	</tr>
+	<tr>
+		<th>fax</th>
+		<td>000-0000-0000</td>
+	</tr>
+	<tr>
+		<th>営業時間</th>
+		<td>10:00~20:00</td>
+	</tr>
+	<tr>
+		<th>アクセス</th>
+		<td>JR渋谷駅ハチ公口に出ます。そのままスクランブル交差点を渡り、道玄坂方面に向かいます。109の左側の道玄坂を登る途中にフォーラム8があります、左側にある「フォーラム8」や「道玄坂駐車場」の青いPの看板が目印です。(徒歩5分)</td>
+	</tr>
+	<tr>
+		<th class="aboutShopEnd">登録番号</th>
+		<td>
+		取扱業種別：販売・保管・貸出<br />
+		登録番号：00東京都...<br />
+		登録年月日：平成20年○月×日<br />
+		有効期限：平成30年△月□日<br />
+		動物取り扱い責任者名：○×△□
+		</td>
+	</tr>
+</table>
+	</div>
+	</div>
+</div>
+<div id="footer">
+  <div id="catblank">
+    <div class="backtotop"> <a href=#header_space><img src="../img/footercat.png" width="72" height="106"  alt="猫シルエット"/></a> </div>
+    <!-- 隠しボタン -->
+	<div id="catComment" class="backtotop">
+		<a href=#header_space><div id="catCommentBlank"></div></a>
+	</div>
+	<!-- 隠しボタンここまで -->
+  </div>
+  <p class="copyright">Copyright &copy; Kazuma Yoshii All right reserved.</p>
+</div>
+</body>
+</html>

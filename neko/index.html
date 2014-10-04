@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Meet With Cats -ホーム</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+
+	<!--  NivoSlider-->
+	<link href="css/nivo-slider.css" rel="stylesheet" type="text/css" />
+	<link href="css/default/default.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+	<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider({
+        effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
+        slices: 15, // For slice animations
+        boxCols: 8, // For box animations
+        boxRows: 4, // For box animations
+        animSpeed: 750, // Slide transition speed
+        pauseTime: 3250, // How long each slide will show
+        startSlide: 0, // Set starting Slide (0 index)
+        directionNav: true, // Next & Prev navigation
+        controlNav: false, // 1,2,3... navigation
+        controlNavThumbs: false, // Use thumbnails for Control Nav
+        pauseOnHover: true, // Stop animation while hovering
+        manualAdvance: false, // Force manual transitions
+        prevText: 'Prev', // Prev directionNav text
+        nextText: 'Next', // Next directionNav text
+        randomStart: false, // Start on a random slide
+        beforeChange: function(){}, // Triggers before a slide transition
+        afterChange: function(){}, // Triggers after a slide transition
+        slideshowEnd: function(){}, // Triggers after all slides have been shown
+        lastSlide: function(){}, // Triggers when last slide is shown
+        afterLoad: function(){} // Triggers when slider has loaded
+    });
+});
+</script>
+
+	<!-- Nivoslider-->
+
+	<script type="text/javascript" src="js/heightLine.js"></script>
+	
+	<!-- topに戻るjquery-->
+<script type="text/javascript">
+$(function() {
+    var topBtn = $('.backtotop');    
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+<!-- topに戻るjquery-->
+	
+	</head>
+
+	<body>
+<div id="header">
+		<div id="header_inner">
+		<h1><a href="index.html"><img src="img/titleRogo.png" width="246" height="34"  alt="Meet With Cats"/></a></h1>
+		<div id="headersuv"> <a href="https://twitter.com/"><img src="img/twitterIco.png" width="50" height="50"  alt="twitterアイコン"/></a> <a href="https://ja-jp.facebook.com/"><img src="img/facebook.png" width="50" height="50"  alt="facebookアイコン"/></a> </div>
+		
+		<div id="globalnav">
+				<ul>
+				<li><a href="index.html"><img src="img/Home.png" width="79" height="20"  alt="ホーム"/></a></li>
+				<li><a href="introduce/index.html"><img src="img/About.png" width="79" height="20"  alt="猫紹介"/></a></li>
+				<li><a href="flow/index.html"><img src="img/Flow.png" width="143" height="19"  alt="引き渡しの流れ"/></a></li>
+				<li><a href="aboutShop/index.html"><img src="img/Shop.png" width="95" height="20"  alt="店舗情報"/></a></li>
+				<li><a href="inquiry/index.html"><img src="img/inquiry.png" width="127" height="19"  alt="お問合わせ"/></a></li>
+			</ul>
+			</div>
+		<!--  globalnav--> 
+	</div>
+		<!-- haeder_inner --> 
+	</div>
+<!-- header-->
+<div id="top_main">
+		<div class="slider-wrapper theme-default">
+		<div id="slider" class="nivoSlider"> <img src="img/slider1.jpg" data-thumb="images/toystory.jpg" alt="2匹の子猫" /> <img src="img/slider2.jpg" data-thumb="images/walle.jpg" alt="寝転ぶ猫" /> <img src="img/slider3.jpg" data-thumb="images/nemo.jpg" alt="黒い猫"/> </div>
+	</div>
+	</div>
+<div id="contents">
+		<div id="contents_innner" class="homeContentsInner">
+		<div id="News">
+				<h2>News</h2>
+				<div id="news-ticker" class="jq-news-ticker">
+					<ul class="jq-news-ticker-items">
+						<li class="jq-news-ticker-item"><span class="date">2013/06/04</span>
+							<p>引き渡しの流れの項目を追加しました！</p>
+						</li>
+						<li class="jq-news-ticker-item"> <span class="date">2013/07/01</span>
+							<p>猫紹介ページ追加、ブリティッシュショートヘアが来ました！</p>
+						</li>
+						<li class="jq-news-ticker-item"><span class="date">2013/06/27</span>
+							<p>猫紹介ページ追加、シャムが来ました！</p>
+						</li>
+					</ul>
+			</div>
+			</div>
+		<div id="Comments">
+				<h3>店長からの一言☆ </h3>
+				<p>猫が好きです！</p>
+			</div>
+		
+			<div id="newBeWrapper">
+		<div id="Newbe1"><h4 class="newBeTitle1">新着猫情報！</h4><a href="introduce/aboutSiamese.html"><img src="img/topSiamese.jpg" width="300" height="120"  alt="シャム猫"/></a></div>
+		<div id="Newbe2"><h4 class="newBeTitle2">新着猫情報！</h4><a href="introduce/aboutBritishShortHeir.html"><img src="img/topBritishShortHair.jpg" width="300" height="120"  alt="ブリティッシュショートヘア"/></a></div>
+		</div
+	</div>
+	</div>
+	
+<div id="footer">
+	<div id="catblank">
+		<div class="backtotop"> <a href=#header_space><img src="img/footercat.png" width="72" height="106"  alt="猫シルエット"/></a> </div>
+	</div>
+	<p class="copyright">Copyright &copy; Kazuma Yoshii All right reserved.</p>
+</div>
+	<!-- newsticker-->
+	<link href="css/news-ticker.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery.news-ticker.min.js"></script>
+	<script>
+            $().ready(function() {
+                $ticker = $('#news-ticker').newsTicker({
+                      debug: true 
+                    , animationType: 'scroll'
+                });
+            });
+	</script>
+	<!-- /newsticker -->
+</body>
+</html>
