@@ -15,19 +15,19 @@ ds.on("push", function(e) {
 
 // message送信(url)
 $("#urlview1").click(function(){
-    ds.push({ type: "url", content: 'http://localhost/milkcocoa/neko/', date: new Date() }, function (e) {});
+    ds.push({ type: "url", content: 'http://takemikami.com/milkcocoa-browsersync-demo/neko/', date: new Date() }, function (e) {});
 });
 $("#urlview2").click(function(){
-    ds.push({ type: "url", content: 'http://localhost/milkcocoa/neko/introduce/', date: new Date() }, function (e) {});
+    ds.push({ type: "url", content: 'http://takemikami.com/milkcocoa-browsersync-demo/neko/introduce/', date: new Date() }, function (e) {});
 });
 $("#urlview3").click(function(){
-    ds.push({ type: "url", content: 'http://localhost/milkcocoa/neko/flow/', date: new Date() }, function (e) {});
+    ds.push({ type: "url", content: 'http://takemikami.com/milkcocoa-browsersync-demo/neko/flow/', date: new Date() }, function (e) {});
 });
 $("#urlview4").click(function(){
-    ds.push({ type: "url", content: 'http://localhost/milkcocoa/neko/aboutShop/', date: new Date() }, function (e) {});
+    ds.push({ type: "url", content: 'http://takemikami.com/milkcocoa-browsersync-demo/neko/aboutShop/', date: new Date() }, function (e) {});
 });
 $("#urlview5").click(function(){
-    ds.push({ type: "url", content: 'http://localhost/milkcocoa/neko/inquiry/', date: new Date() }, function (e) {});
+    ds.push({ type: "url", content: 'http://takemikami.com/milkcocoa-browsersync-demo/neko/inquiry/', date: new Date() }, function (e) {});
 });
 
 // message送信(scroll)
