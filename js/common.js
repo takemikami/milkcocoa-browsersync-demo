@@ -1,7 +1,7 @@
     $(function() {
 
 // milkcocoaの初期化
-var milkcocoa = new MilkCocoa("https://io-ei0ug6wkl.mlkcca.com");
+var milkcocoa = new MilkCocoa("https://io-li0v1x3q6.mlkcca.com");
 var ds = milkcocoa.dataStore("message");
 
 // message受信
@@ -41,7 +41,7 @@ $('#scrollsync').click(function () {
 });
 
 chatpart.start({
-    host : "https://io-ei0ug6wkl.mlkcca.com",
+    host : "https://io-li0v1x3q6.mlkcca.com",
     datastore  : "chat"
 });
 
